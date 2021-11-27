@@ -19,9 +19,10 @@
   <?php
 
   include "Vistas/estructura/header.php";
-
+  
   include "Vistas/estructura/menu.php";
 
+  /*rutas cortas para la url de las vistas*/
   if(isset($_GET["enlace"])){
     if($_GET["enlace"]=="inicio" ||
        $_GET["enlace"]=="zonas" ||
@@ -31,9 +32,8 @@
     ){
       include "Vistas/modulos/".$_GET["enlace"].".php";
     }
-    
   }
-  include "Vistas/modulos/inicio.php";
+     /* include "Vistas/modulos/inicio.php";*/
   ?>
 
 

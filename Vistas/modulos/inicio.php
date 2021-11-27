@@ -5,7 +5,7 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1>PNEL PRINCIPAL</h1>
+            <h1>PANEL PRINCIPAL</h1>
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
@@ -23,7 +23,7 @@
       <!-- Default box -->
       <div class="card">
         <div class="card-header">
-          <h3 class="card-title">Title</h3>
+          <h3 class="card-title">Titulo</h3>
 
           <div class="card-tools">
             <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
@@ -35,7 +35,7 @@
           </div>
         </div>
         <div class="card-body">
-          Start creating your amazing application!
+        ¡Comienza a crear tu increíble aplicación!
         </div>
         <!-- /.card-body -->
         <div class="card-footer">
