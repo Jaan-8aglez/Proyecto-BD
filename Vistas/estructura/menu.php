@@ -65,52 +65,47 @@
             </ul>
           </li>
           <li class="nav-item">
-            <a href="../widgets.html" class="nav-link">
-              <i class="nav-icon fas fa-th"></i>
+            <a href="zonas" class="nav-link">
+              <i class="nav-icon fas fa-hotel"></i>
               <p>
                 Zonas
-                <span class="right badge badge-danger">New</span>
               </p>
             </a>
           </li>
           <li class="nav-item">
-            <a href="../widgets.html" class="nav-link">
-              <i class="nav-icon fas fa-th"></i>
+            <a href="bomberos" class="nav-link">
+              <i class="nav-icon fas fa-users"></i>
               <p>
                 Cuerpo de Bomberos
-                <span class="right badge badge-danger">New</span>
               </p>
             </a>
           </li>
           <li class="nav-item">
-            <a href="../widgets.html" class="nav-link">
-              <i class="nav-icon fas fa-th"></i>
+            <a href="puestoControl" class="nav-link">
+              <i class="nav-icon fas fa-clipboard-check"></i>
               <p>
                 Puestos de Control
-                <span class="right badge badge-danger">New</span>
               </p>
             </a>
           </li>
           <li class="nav-item">
-            <a href="../widgets.html" class="nav-link">
-              <i class="nav-icon fas fa-th"></i>
+            <a href="frecuencias" class="nav-link">
+              <i class="nav-icon fas fa-wave-square"></i>
               <p>
                 Frecuencias
-                <span class="right badge badge-danger">New</span>
               </p>
             </a>
           </li>
           <li class="nav-item">
-            <a href="../widgets.html" class="nav-link">
-              <i class="nav-icon fas fa-th"></i>
+            <a href="guardas" class="nav-link">
+              <i class="nav-icon fas fa-fire-extinguisher"></i>
               <p>
                 Guardas
-                <span class="right badge badge-danger">New</span>
               </p>
             </a>
           </li>
 
-          <li class="nav-header">EXAMPLES</li>
+          <li class="nav-header">OPCIONES</li>
           <li class="nav-item">
             <a href="../calendar.html" class="nav-link">
               <i class="nav-icon far fa-calendar-alt"></i>

@@ -18,15 +18,20 @@
   <!-- NavBar -->
   <?php
 
-  include "Vistas/modulos/header.php";
+  include "Vistas/estructura/header.php";
 
-  include "Vistas/modulos/menu.php";
+  include "Vistas/estructura/menu.php";
 
   if(isset($_GET["enlace"])){
-    if($_GET["enlace"]=="inicio"){
+    if($_GET["enlace"]=="inicio" ||
+       $_GET["enlace"]=="zonas" ||
+       $_GET["enlace"]=="puestoControl" ||
+       $_GET["enlace"]=="guardas" ||
+       $_GET["enlace"]=="bomberos" 
+    ){
       include "Vistas/modulos/".$_GET["enlace"].".php";
-
     }
+    
   }
   include "Vistas/modulos/inicio.php";
   ?>
@@ -40,7 +45,7 @@
 </div>
 <!-- ./wrapper -->
 <?php
-  include "Vistas/modulos/footer.php";
+  include "Vistas/estructura/footer.php";
   
   ?>
 
