@@ -121,7 +121,7 @@ $resultado = $conexion->query("SELECT * FROM cuerpo_bomberos")or die ($conexion-
     <div class="modal-content">
       <form action="././Modelos/insertarCuerpo.php" method="POST" enctype="multipart/form-data" > 
       <div class="modal-header">
-        <h5 class="modal-title" id="ModalInsertarLabel" style="color:#fff" >Agregar Cuerpo de Bombero</h5>
+        <h5 class="modal-title" id="ModalInsertarLabel">Agregar Cuerpo de Bombero</h5>
         <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close">
         <span aria-hidden="true">&times;</span>
         </button>

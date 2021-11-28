@@ -114,7 +114,7 @@ $resultado = $conexion->query("SELECT * FROM zonas")or die ($conexion->error);
     <div class="modal-content">
       <form action="././Modelos/insertarZona.php" method="POST" enctype="multipart/form-data" > 
       <div class="modal-header">
-        <h5 class="modal-title" id="ModalInsertarLabel" style="color:#fff" >Agregar Zona</h5>
+        <h5 class="modal-title" id="ModalInsertarLabel">Agregar Zona</h5>
         <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close">
         <span aria-hidden="true">&times;</span>
         </button>
