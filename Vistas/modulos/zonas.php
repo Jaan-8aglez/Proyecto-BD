@@ -43,6 +43,7 @@
                   </thead>
                 <tbody>
                 <?php
+
                  while($fila= mysqli_fetch_array($resultado)){
                ?>
             <tr>
