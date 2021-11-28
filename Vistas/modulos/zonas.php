@@ -1,5 +1,10 @@
+<?php
+require '././Modelos/conexion.php';
 
-  <!-- Content Wrapper. Contains page content -->
+$resultado = $conexion->query("SELECT * FROM zonas")or die ($conexion->error);
+
+?>
+<!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <section class="content-header">
@@ -24,15 +29,32 @@
       <!-- Default box -->
       <div class="card">
         <div class="card-header">
+        <?php
+          if(isset($_GET['error'])){
+        ?>
+        <div class="alert alert-danger" role="alert">
+         <?php echo $_GET['error']; ?>
+         <button type="button" class="btn-close" data-dismiss="alert" aria-label="Close"></button>
+        </div>
+        <?php  } ?>
+
+        <?php
+          if(isset($_GET['success'])){
+        ?>
+        <div class="alert alert-success" role="alert">
+           Se ha insertado correctamente
+         <button type="button" class="btn-close" data-dismiss="alert" aria-label="Close"></button>
+        </div>
+        <?php  } ?>
+
         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#ModalInsertar">
           <i class="fa fa-plus mr-2"></i>Agregar Zonas</button>
         </div>
-
         <div class="card-body">
                 <table id="example2" class="table table-bordered table-hover">
                   <thead>
                   <tr>
-                    <th class="text-center">Punto geodésico</th>
+                    <th class="text-center">Punto geo</th>
                     <th class="text-center" >Nombre</th>
                     <th class="text-center" >Frecuencia</th>
                     <th class="text-center" >Latitud</th>
@@ -52,7 +74,6 @@
              <td><?php echo $fila['frecuencia'];?></td>
              <td><?php echo $fila['latitud'];?></td>
              <td><?php echo $fila['longitud'];?></td>
-
 
              <td><button class="btn btn-success btnEditar" 
              data-id="<?php echo $fila['punto_geo'];?>"
@@ -88,12 +109,12 @@
   </div>
   <!-- /.content-wrapper -->
 
-    <!-- Modal Insertar-->
+<!-- Modal Insertar-->
 <div class="modal fade" id="ModalInsertar" tabindex="-1" aria-labelledby="ModalInsertarLabel" aria-hidden="true">
-  <div class="modal-dialog">
+  <div class="modal-dialog" role="document">
     <div class="modal-content">
-      <form role="form" action="./insertarZona.php" method="POST" enctype="multipart/form-data" > 
-      <div class="modal-header" style="background: #FF5722;" >
+      <form action="././Modelos/insertarZona.php" method="POST" enctype="multipart/form-data" > 
+      <div class="modal-header">
         <h5 class="modal-title" id="ModalInsertarLabel" style="color:#fff" >Agregar Zona</h5>
         <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close">
         <span aria-hidden="true">&times;</span>
@@ -127,3 +148,102 @@
     </div>
   </div>
 </div>
+
+<!-- Modal Eliminar -->
+  <div class="modal fade" id="modalEliminar" tabindex="-1" aria-labelledby="modalEliminarLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document" >
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalEliminarLabel">Eliminar Zona</h5>
+        <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        ¿Desea eliminar esta zona?
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+        <button type="submit" class="btn btn-danger eliminar" data-dismiss="modal">Eliminar</button>
+      </div>
+    </div>
+  </div>
+</div>
+  <!-- Modal Editar -->
+  <div class="modal fade" id="modalEditar" tabindex="-1" aria-labelledby="modalEditarLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document" >
+    <div class="modal-content">
+      <form action="././Modelos/editarZona.php" method="POST" enctype="multipart/form-data" > 
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalEditarLabel">Editar Zona</h5>
+        <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <input type="hidden" id="idEdit" name="id" class="form-control" >
+        <div class="form-group">
+          <label for="nombre" >Nombre:</label> 
+          <input type="text" name="nombre" placeholder="nombre" id="nombreEdit" class="form-control" required> 
+        </div>
+        <div class="form-group">
+          <label for="descripcion" >Frecuencia:</label> 
+          <input type="text" name="frecuencia" placeholder="frecuencia" id="frecuenciaEdit" class="form-control" required> 
+        </div>
+        <div class="row">
+        <div class="form-group col-6">
+          <label for="precio" >Latitud</label> 
+          <input type="number" min="0" name="latitud" placeholder="latitud" id="latitudEdit" class="form-control" required> 
+        </div>
+        <div class="form-group col-6">
+          <label for="inventario" >Longitud</label> 
+          <input type="number" min="0" name="longitud" placeholder="longitud" id="longitudEdit" class="form-control" required> 
+        </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+        <button type="submit" class="btn btn-primary editar">Actualizar</button>
+      </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<script>
+$(document).ready(function(){
+  var idEliminar= -1;
+  var idEditar= -1;
+  var fila;
+  $(".btnEliminar").click(function(){
+    idEliminar=$(this).data('id');
+    fila=$(this).parent('td').parent('tr');
+  });
+  $(".eliminar").click(function(){
+    $.ajax({
+      url: 'eliminarZona.php',
+      method: 'POST',
+      data:{
+        id:idEliminar
+      }
+    }).done(function(res){
+      alert(res);
+      $(fila).fadeOut(1000);
+    });
+  });
+  $(".btnEditar").click(function(){
+    idEditar=$(this).data('id');
+    var nombre=$(this).data('nombre');
+    var frecuencia=$(this).data('frecuencia');
+    var latitud=$(this).data('latitud');
+    var longitud=$(this).data('longitud');
+    $("#idEdit").val(idEditar);
+    $("#nombreEdit").val(nombre);
+    $("#frecuenciaEdit").val(frecuencia);
+    $("#latitudEdit").val(latitud);
+    $("#longitudEdit").val(longitud);
+
+});
+
+});
+</script>
