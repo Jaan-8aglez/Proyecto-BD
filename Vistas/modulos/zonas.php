@@ -59,8 +59,7 @@ $resultado = $conexion->query("SELECT * FROM zonas")or die ($conexion->error);
                     <th class="text-center" >Frecuencia</th>
                     <th class="text-center" >Latitud</th>
                     <th class="text-center" >Longitud</th>
-                    <th class="text-center" >Editar</th>
-                    <th class="text-center" >Eliminar</th>
+                    <th class="text-center" >Acciones</th>
                   </tr>
                   </thead>
                 <tbody>
@@ -75,16 +74,16 @@ $resultado = $conexion->query("SELECT * FROM zonas")or die ($conexion->error);
              <td><?php echo $fila['latitud'];?></td>
              <td><?php echo $fila['longitud'];?></td>
 
-             <td><button class="btn btn-success btnEditar" 
+             <td><button class="btn btn-success btnEditar mr-5" 
              data-id="<?php echo $fila['punto_geo'];?>"
              data-nombre="<?php echo $fila['nombre'];?>"
              data-frecuencia="<?php echo $fila['frecuencia'];?>"
              data-latitud="<?php echo $fila['latitud'];?>"
              data-longitud="<?php echo $fila['longitud'];?>"
              data-toggle="modal" data-target="#modalEditar">
-             <i class="fa fa-edit"></i></button></td>
+             <i class="fa fa-edit"></i></button>
 
-             <td><button class="btn btn-danger btnEliminar" 
+             <button class="btn btn-danger btnEliminar" 
              data-id="<?php echo $fila['punto_geo'];?>"
              data-toggle="modal" data-target="#modalEliminar">
              <i class="fa fa-trash"></i></button></td>
@@ -122,20 +121,20 @@ $resultado = $conexion->query("SELECT * FROM zonas")or die ($conexion->error);
       </div>
       <div class="modal-body">
         <div class="form-group">
-          <label for="nombre" >Nombre:</label> 
+          <label>Nombre:</label> 
           <input type="text" name="nombre" placeholder="nombre" id="nombre" class="form-control" required> 
         </div>
         <div class="form-group">
-          <label for="descripcion" >Frecuencia:</label> 
+          <label>Frecuencia:</label> 
           <input type="text" name="frecuencia" placeholder="frecuencia" id="frecuencia" class="form-control" required> 
         </div>
         <div class="row">
         <div class="form-group col-6">
-          <label for="precio" >Latitud</label> 
+          <label>Latitud</label> 
           <input type="number" min="0" name="latitud" placeholder="latitud" id="latitud" class="form-control" required> 
         </div>
         <div class="form-group col-6">
-          <label for="inventario" >Longitud</label> 
+          <label>Longitud</label> 
           <input type="number" min="0" name="longitud" placeholder="longitud" id="longitud" class="form-control" required> 
         </div>
         </div>
@@ -183,20 +182,20 @@ $resultado = $conexion->query("SELECT * FROM zonas")or die ($conexion->error);
       <div class="modal-body">
         <input type="hidden" id="idEdit" name="id" class="form-control" >
         <div class="form-group">
-          <label for="nombre" >Nombre:</label> 
+          <label>Nombre:</label> 
           <input type="text" name="nombre" placeholder="nombre" id="nombreEdit" class="form-control" required> 
         </div>
         <div class="form-group">
-          <label for="descripcion" >Frecuencia:</label> 
+          <label>Frecuencia:</label> 
           <input type="text" name="frecuencia" placeholder="frecuencia" id="frecuenciaEdit" class="form-control" required> 
         </div>
         <div class="row">
         <div class="form-group col-6">
-          <label for="precio" >Latitud</label> 
+          <label>Latitud</label> 
           <input type="number" min="0" name="latitud" placeholder="latitud" id="latitudEdit" class="form-control" required> 
         </div>
         <div class="form-group col-6">
-          <label for="inventario" >Longitud</label> 
+          <label>Longitud</label> 
           <input type="number" min="0" name="longitud" placeholder="longitud" id="longitudEdit" class="form-control" required> 
         </div>
         </div>
