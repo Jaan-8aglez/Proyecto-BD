@@ -105,7 +105,7 @@ $resultado = $conexion->query("SELECT * FROM frecuencias")or die ($conexion->err
 <div class="modal fade" id="ModalInsertar" tabindex="-1" aria-labelledby="ModalInsertarLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
-      <form action="././Modelos/insertarZona.php" method="POST" enctype="multipart/form-data" > 
+      <form action="././Modelos/insertarFrecuencia.php" method="POST" enctype="multipart/form-data" > 
       <div class="modal-header">
         <h5 class="modal-title" id="ModalInsertarLabel">Agregar Frecuencias</h5>
         <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close">
@@ -151,7 +151,7 @@ $resultado = $conexion->query("SELECT * FROM frecuencias")or die ($conexion->err
   <div class="modal fade" id="modalEditar" tabindex="-1" aria-labelledby="modalEditarLabel" aria-hidden="true">
   <div class="modal-dialog" role="document" >
     <div class="modal-content">
-      <form action="././Modelos/editarZona.php" method="POST" enctype="multipart/form-data" > 
+      <form action="././Modelos/editarFrecuencia.php" method="POST" enctype="multipart/form-data" > 
       <div class="modal-header">
         <h5 class="modal-title" id="modalEditarLabel">Editar Frecuencia</h5>
         <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close">
@@ -160,12 +160,10 @@ $resultado = $conexion->query("SELECT * FROM frecuencias")or die ($conexion->err
       </div>
       <div class="modal-body">
         <input type="hidden" id="idEdit" name="id" class="form-control" >
-       
         <div class="form-group">
           <label>Frecuencia:</label> 
           <input type="text" name="frecuencia" placeholder="frecuencia" id="frecuenciaEdit" class="form-control" required> 
         </div>
-       
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
@@ -190,7 +188,7 @@ $(document).ready(function(){
   });
   $(".eliminar").click(function(){
     $.ajax({
-      url: '././Modelos/eliminarZona.php',
+      url: '././Modelos/eliminarFrecuencia.php',
       method: 'POST',
       data:{
         id:idEliminar
@@ -204,13 +202,8 @@ $(document).ready(function(){
     idEditar=$(this).data('id');
     var nombre=$(this).data('nombre');
     var frecuencia=$(this).data('frecuencia');
-    var latitud=$(this).data('latitud');
-    var longitud=$(this).data('longitud');
     $("#idEdit").val(idEditar);
-    $("#nombreEdit").val(nombre);
     $("#frecuenciaEdit").val(frecuencia);
-    $("#latitudEdit").val(latitud);
-    $("#longitudEdit").val(longitud);
 
 });
 
