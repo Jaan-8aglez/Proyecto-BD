@@ -1,7 +1,7 @@
 <?php
 require '././Modelos/conexion.php';
 
-$resultado = $conexion->query("SELECT * FROM zonas")or die ($conexion->error);
+$resultado = $conexion->query("SELECT * FROM zona")or die ($conexion->error);
 
 ?>
 <!-- Content Wrapper. Contains page content -->
