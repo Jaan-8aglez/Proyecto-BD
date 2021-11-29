@@ -71,7 +71,7 @@ $resultado = $conexion->query("SELECT * FROM frecuencias")or die ($conexion->err
 
              <td><button class="btn btn-success btnEditar mr-5" 
              data-id="<?php echo $fila['id_frecuencia'];?>"
-             data-frecuencia="<?php echo $fila['frecuencia'];?>"
+             data-frecuencia="<?php echo $fila['frecuencia_zona'];?>"
 
              data-toggle="modal" data-target="#modalEditar">
              <i class="fa fa-edit"></i></button>
@@ -200,7 +200,6 @@ $(document).ready(function(){
   });
   $(".btnEditar").click(function(){
     idEditar=$(this).data('id');
-    var nombre=$(this).data('nombre');
     var frecuencia=$(this).data('frecuencia');
     $("#idEdit").val(idEditar);
     $("#frecuenciaEdit").val(frecuencia);

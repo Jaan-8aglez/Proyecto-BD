@@ -13,10 +13,9 @@ if(isset($_POST['tel1']) && isset($_POST['tel2']) && isset($_POST['hombre']) && 
             '".$_POST['helicoptero']."'
         )
     ")or die($conexion->error);
-    header("Location: ./Vistas/modulos/bomberos.php?success");
+    header("Refresh:0; url=".$_SERVER['HTTP_REFERER']."?success");
 
 }else{
-    header("Location: ./Vistas/modulos/bomberos.php?error=Favor de llenar todos los campos");
+    header("Location: ./Vistas/modulos/bomberos?error=Favor de llenar todos los campos");
 }
 
-?>

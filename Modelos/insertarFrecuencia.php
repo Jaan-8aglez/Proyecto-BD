@@ -9,10 +9,9 @@ if(isset($_POST['frecuencia'])){
           
         )
     ")or die($conexion->error);
-    header("Location: ./frecuencias?success");
+    header("Refresh:0; url=".$_SERVER['HTTP_REFERER']."?success");
 
 }else{
-    header("Location: ./frecuencias?error=Favor de llenar todos los campos");
+    header("Location: ./Vistas/modulos/frecuencias?error=Favor de llenar todos los campos");
 }
 
-?>

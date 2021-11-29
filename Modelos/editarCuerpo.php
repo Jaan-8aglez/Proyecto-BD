@@ -5,14 +5,14 @@ if(isset($_POST['tel1']) && isset($_POST['tel2']) && isset($_POST['hombre']) && 
   
    
     $conexion->query("UPDATE cuerpo_bomberos SET
-                                  tel_emer1='".$_POST['tel1']."',
-                                  tel_emer2='".$_POST['tel2']."',
-                                  no_hombres='".$_POST['hombre']."',
-                                  no_camiones='".$_POST['camion']."'
-                                  no_cisternas='".$_POST['cisterna']."'
-                                  no_helicoptero='".$_POST['helicoptero']."'
-                                  
-                                  where id_cuerpo=".$_POST['id']);
-                                  header("Location: ./bomberos.php?success");                     
-}
-?>
+    tel_emer1='".$_POST['tel1']."',
+    tel_emer2='".$_POST['tel2']."',
+    no_hombres='".$_POST['hombre']."',
+    no_camiones='".$_POST['camion']."',
+    no_cisternas='".$_POST['cisterna']."',
+    no_helicoptero='".$_POST['helicoptero']."'
+    
+    where id_cuerpo=".$_POST['id']);
+    header("Refresh:0; url=" . $_SERVER['HTTP_REFERER'] . "?success");
+}              
+
