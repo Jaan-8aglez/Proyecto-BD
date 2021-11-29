@@ -47,7 +47,7 @@ $resultado = $conexion->query("SELECT * FROM zonas")or die ($conexion->error);
         </div>
         <?php  } ?>
 
-        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#ModalInsertar">
+        <button type="button" class="btn btn-primary left" data-toggle="modal" data-target="#ModalInsertar">
           <i class="fa fa-plus mr-2"></i>Agregar Zonas</button>
         </div>
         <div class="card-body">
@@ -209,7 +209,10 @@ $resultado = $conexion->query("SELECT * FROM zonas")or die ($conexion->error);
     </div>
   </div>
 </div>
-
+<!-- jQuery -->
+<script src="assets/jquery/jquery.min.js"></script>
+<!-- jQuery UI 1.11.4 -->
+<script src="assets/jquery-ui/jquery-ui.min.js"></script>
 <script>
 $(document).ready(function(){
   var idEliminar= -1;
@@ -221,7 +224,7 @@ $(document).ready(function(){
   });
   $(".eliminar").click(function(){
     $.ajax({
-      url: 'eliminarZona.php',
+      url: '././Modelos/eliminarZona.php',
       method: 'POST',
       data:{
         id:idEliminar

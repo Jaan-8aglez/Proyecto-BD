@@ -11,10 +11,10 @@ if(isset($_POST['nombre']) && isset($_POST['frecuencia']) && isset($_POST['latit
             '".$_POST['longitud']."'
         )
     ")or die($conexion->error);
-    header("Location: ./Vistas/modulos/zonas.php?success");
+    header("Location: ./zonas?success");
 
 }else{
-    header("Location: ./Vistas/modulos/zonas.php?error=Favor de llenar todos los campos");
+    header("Location: ./zonas?error=Favor de llenar todos los campos");
 }
 
 ?>

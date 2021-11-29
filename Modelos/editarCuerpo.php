@@ -13,6 +13,6 @@ if(isset($_POST['tel1']) && isset($_POST['tel2']) && isset($_POST['hombre']) && 
                                   no_helicoptero='".$_POST['helicoptero']."'
                                   
                                   where id_cuerpo=".$_POST['id']);
-                                  header("Location: ./Vistas/modulos/bomberos.php?success");                     
+                                  header("Location: ./bomberos.php?success");                     
 }
 ?>
