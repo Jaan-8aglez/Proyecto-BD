@@ -239,7 +239,10 @@ $resultado = $conexion->query("SELECT * FROM cuerpo_bomberos")or die ($conexion-
     </div>
   </div>
 </div>
-
+<!-- jQuery -->
+<script src="assets/jquery/jquery.min.js"></script>
+<!-- jQuery UI 1.11.4 -->
+<script src="assets/jquery-ui/jquery-ui.min.js"></script>
 <script>
 $(document).ready(function(){
   var idEliminar= -1;
@@ -251,7 +254,7 @@ $(document).ready(function(){
   });
   $(".eliminar").click(function(){
     $.ajax({
-      url: 'eliminarCuerpo.php',
+      url: '././Modelos/eliminarCuerpo.php',
       method: 'POST',
       data:{
         id:idEliminar

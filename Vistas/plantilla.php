@@ -28,7 +28,8 @@
        $_GET["enlace"]=="zonas" ||
        $_GET["enlace"]=="puestoControl" ||
        $_GET["enlace"]=="guardas" ||
-       $_GET["enlace"]=="bomberos" 
+       $_GET["enlace"]=="bomberos" ||
+       $_GET["enlace"]=="frecuencias" 
     ){
       include "Vistas/modulos/".$_GET["enlace"].".php";
     }
