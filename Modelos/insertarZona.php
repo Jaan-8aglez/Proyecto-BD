@@ -11,7 +11,8 @@ if(isset($_POST['nombre']) && isset($_POST['frecuencia']) && isset($_POST['latit
             '".$_POST['longitud']."'
         )
     ")or die($conexion->error);
-    header("Location: ./zonas?success");
+    // header("Location: ./zonas?success");
+    header("Refresh:0; url=".$_SERVER['HTTP_REFERER']."?success");
 
 }else{
     header("Location: ./zonas?error=Favor de llenar todos los campos");

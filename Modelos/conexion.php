@@ -1,6 +1,6 @@
 <?php
 	$host="localhost";
-	$bd="proyecto";
+	$bd="incendios";
 	$usuario="root";
 	$password="";
 
