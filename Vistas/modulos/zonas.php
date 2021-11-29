@@ -1,7 +1,7 @@
 <?php
 require '././Modelos/conexion.php';
 
-$resultado = $conexion->query("SELECT * FROM zonas")or die ($conexion->error);
+$resultado = $conexion->query("SELECT * FROM zona")or die ($conexion->error);
 
 ?>
 <!-- Content Wrapper. Contains page content -->
@@ -209,6 +209,32 @@ $resultado = $conexion->query("SELECT * FROM zonas")or die ($conexion->error);
     </div>
   </div>
 </div>
+</div>
+
+<!-- Modal Busqueda  -->
+ <div class="modal fade" id="modalBuscar" tabindex="-1" aria-labelledby="modalBuscarLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document" >
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalBuscarLabel">Buscar zona</h5>
+        <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+    </div>
+      <div class="modal-footer">
+        <div class="campo">
+      <h4 class="title" >NOMBRE ZONA</h4>
+      <input class="form-control col-6" type="text" name="nombre" id="nombre" placeholder="Buscar por Nombre">
+    </div>
+    
+      </div>
+    </div>
+  </div>
+</div>
+  
+        
 
 <script>
 $(document).ready(function(){
