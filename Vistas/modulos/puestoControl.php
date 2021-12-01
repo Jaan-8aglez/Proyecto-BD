@@ -48,7 +48,7 @@ $resultado = $conexion->query("SELECT * FROM puestos_control")or die ($conexion-
         <?php  } ?>
 
         <div class="input-group input-group-sm col-6 float-right">
-            <input type="text" class="form-control" name="nombre" placeholder="nombre">
+            <input type="text" class="form-control" name="nombre" id="nombre" placeholder="nombre">
             <span class="input-group-append">
               <button type="button" class="btn btn-info btn-flat"><i class="fas fa-search"></i></button>
             </span>

@@ -48,7 +48,7 @@ $resultado = $conexion->query("SELECT * FROM guardas")or die ($conexion->error);
         <?php  } ?>
 
         <div class="input-group input-group-sm col-6 float-right">
-            <input type="text" class="form-control" name="nombre" placeholder="nombre">
+            <input type="text" class="form-control" name="nombre" id="nombre" placeholder="nombre">
             <span class="input-group-append">
               <button type="button" class="btn btn-info btn-flat"><i class="fas fa-search"></i></button>
             </span>
@@ -89,7 +89,8 @@ $resultado = $conexion->query("SELECT * FROM guardas")or die ($conexion->error);
              <td><?php echo $fila['punto_geo'];?></td>
 
              <td class="text-center"><button class="btn btn-success btnEditar mr-3" 
-             data-id="<?php echo $fila['dni_guarda'];?>"
+             data-id="<?php echo $fila['id_guarda'];?>"
+             data-dni="<?php echo $fila['dni_guarda'];?>"
              data-nombre="<?php echo $fila['nombre'];?>"
              data-telefono="<?php echo $fila['telefono'];?>"
              data-direccion="<?php echo $fila['direccion'];?>"
@@ -101,7 +102,7 @@ $resultado = $conexion->query("SELECT * FROM guardas")or die ($conexion->error);
              <i class="fa fa-edit"></i></button>
 
              <button class="btn btn-danger btnEliminar" 
-             data-id="<?php echo $fila['dni_guarda'];?>"
+             data-id="<?php echo $fila['id_guarda'];?>"
              data-toggle="modal" data-target="#modalEliminar">
              <i class="fa fa-trash"></i></button></td>
 
@@ -218,6 +219,10 @@ $resultado = $conexion->query("SELECT * FROM guardas")or die ($conexion->error);
       </div>
       <div class="modal-body">
       <input type="hidden" id="idEdit" name="id" class="form-control" >
+         <div class="form-group">
+          <label>DNI Guarda</label> 
+          <input type="text" name="dni" placeholder="DNI guarda" id="dniEdit" class="form-control" required> 
+        </div>
         <div class="row">
         <div class="form-group col-6">
           <label>Nombre</label> 
@@ -288,6 +293,7 @@ $(document).ready(function(){
   });
   $(".btnEditar").click(function(){
     idEditar=$(this).data('id');
+    var dni=$(this).data('dni');
     var nombre=$(this).data('nombre');
     var telefono=$(this).data('telefono');
     var direccion=$(this).data('direccion');
@@ -296,6 +302,7 @@ $(document).ready(function(){
     var contraseña=$(this).data('contraseña');
     var punto_geo=$(this).data('punto_geo');
     $("#idEdit").val(idEditar);
+    $("#dniEdit").val(dni);
     $("#nombreEdit").val(nombre);
     $("#telefonoEdit").val(telefono);
     $("#direccionEdit").val(direccion);

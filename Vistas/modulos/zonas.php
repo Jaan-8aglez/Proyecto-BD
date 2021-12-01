@@ -1,7 +1,14 @@
 <?php
 require '././Modelos/conexion.php';
 
-$resultado = $conexion->query("SELECT * FROM zonas")or die ($conexion->error);
+$salida ="";
+$resultado = $conexion->query("SELECT * FROM zonas ORDER BY punto_geo")or die ($conexion->error);
+
+if(isset($_POST['consulta'])){
+	$res=$conexion->real_escape_string($_POST['consulta']);
+	$query= "SELECT * FROM zonas WHERE nombre LIKE '%".$res."%'   "; 
+	
+}
 
 ?>
 <!-- Content Wrapper. Contains page content -->
@@ -48,7 +55,7 @@ $resultado = $conexion->query("SELECT * FROM zonas")or die ($conexion->error);
         <?php  } ?>
 
         <div class="input-group input-group-sm col-6 float-right">
-            <input type="text" class="form-control" name="nombre" placeholder="nombre">
+            <input type="text" class="form-control" name="nombre" id="nombre" placeholder="nombre">
             <span class="input-group-append">
               <button type="button" class="btn btn-info btn-flat"><i class="fas fa-search"></i></button>
             </span>
@@ -57,7 +64,7 @@ $resultado = $conexion->query("SELECT * FROM zonas")or die ($conexion->error);
         <button type="button" class="btn btn-primary float-left" data-toggle="modal" data-target="#ModalInsertar">
           <i class="fa fa-plus mr-2"></i>Agregar Zonas</button>
         </div>
-        <div class="card-body">
+          <div class="card-body" id="datos">
                 <table id="example2" class="table table-bordered table-hover">
                   <thead>
                   <tr>
@@ -101,7 +108,7 @@ $resultado = $conexion->query("SELECT * FROM zonas")or die ($conexion->error);
                 </tbody>
                         
                 </table>
-              </div>
+          </div>
               <!-- /.card-body -->
 
         <div class="card-footer">
