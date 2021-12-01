@@ -47,7 +47,14 @@ $resultado = $conexion->query("SELECT * FROM zonas")or die ($conexion->error);
         </div>
         <?php  } ?>
 
-        <button type="button" class="btn btn-primary left" data-toggle="modal" data-target="#ModalInsertar">
+        <div class="input-group input-group-sm col-6 float-right">
+            <input type="text" class="form-control" name="nombre" placeholder="nombre">
+            <span class="input-group-append">
+              <button type="button" class="btn btn-info btn-flat"><i class="fas fa-search"></i></button>
+            </span>
+        </div>
+
+        <button type="button" class="btn btn-primary float-left" data-toggle="modal" data-target="#ModalInsertar">
           <i class="fa fa-plus mr-2"></i>Agregar Zonas</button>
         </div>
         <div class="card-body">
@@ -75,7 +82,7 @@ $resultado = $conexion->query("SELECT * FROM zonas")or die ($conexion->error);
              <td><?php echo $fila['latitud'];?></td>
              <td><?php echo $fila['longitud'];?></td>
 
-             <td><button class="btn btn-success btnEditar mr-5" 
+             <td><button class="btn btn-success btnEditar" 
              data-id="<?php echo $fila['punto_geo'];?>"
              data-nombre="<?php echo $fila['nombre'];?>"
              data-frecuencia="<?php echo $fila['frecuencia'];?>"

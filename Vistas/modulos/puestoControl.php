@@ -85,7 +85,7 @@ $resultado = $conexion->query("SELECT * FROM puestos_control")or die ($conexion-
              <i class="fa fa-edit"></i></button>
 
              <button class="btn btn-danger btnEliminar" 
-             data-id="<?php echo $fila['punto_geo'];?>"
+             data-id="<?php echo $fila['id_puesto'];?>"
              data-toggle="modal" data-target="#modalEliminar">
              <i class="fa fa-trash"></i></button></td>
 
