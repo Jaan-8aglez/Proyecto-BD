@@ -47,7 +47,14 @@ $resultado = $conexion->query("SELECT * FROM frecuencias")or die ($conexion->err
         </div>
         <?php  } ?>
 
-        <button type="button" class="btn btn-primary left" data-toggle="modal" data-target="#ModalInsertar">
+        <div class="input-group input-group-sm col-6 float-right">
+            <input type="text" class="form-control" name="nombre" placeholder="frecuencia">
+            <span class="input-group-append">
+              <button type="button" class="btn btn-info btn-flat"><i class="fas fa-search"></i></button>
+            </span>
+        </div>
+
+        <button type="button" class="btn btn-primary float-left" data-toggle="modal" data-target="#ModalInsertar">
           <i class="fa fa-plus mr-2"></i>Agregar Frecuencias</button>
         </div>
         <div class="card-body">
@@ -69,10 +76,9 @@ $resultado = $conexion->query("SELECT * FROM frecuencias")or die ($conexion->err
              <td><?php echo $fila['id_frecuencia'];?></td>
              <td><?php echo $fila['frecuencia_zona'];?></td>
 
-             <td><button class="btn btn-success btnEditar mr-5" 
+             <td class="text-center"><button class="btn btn-success btnEditar mr-3" 
              data-id="<?php echo $fila['id_frecuencia'];?>"
              data-frecuencia="<?php echo $fila['frecuencia_zona'];?>"
-
              data-toggle="modal" data-target="#modalEditar">
              <i class="fa fa-edit"></i></button>
 

@@ -48,7 +48,14 @@ $resultado = $conexion->query("SELECT * FROM cuerpo_bomberos")or die ($conexion-
         </div>
         <?php  } ?>
 
-        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#ModalInsertar">
+        <div class="input-group input-group-sm col-6 float-right">
+            <input type="text" class="form-control" name="nombre" placeholder="telefono">
+            <span class="input-group-append">
+              <button type="button" class="btn btn-info btn-flat"><i class="fas fa-search"></i></button>
+            </span>
+        </div>
+
+        <button type="button" class="btn btn-primary float-left" data-toggle="modal" data-target="#ModalInsertar">
           <i class="fa fa-plus mr-2"></i>Agregar Bomberos</button>
         </div>
         <div class="card-body">
@@ -79,7 +86,7 @@ $resultado = $conexion->query("SELECT * FROM cuerpo_bomberos")or die ($conexion-
              <td><?php echo $fila['no_cisternas'];?></td>
              <td><?php echo $fila['no_helicoptero'];?></td>
 
-             <td><button class="btn btn-success btnEditar mr-5" 
+             <td class="text-center"><button class="btn btn-success btnEditar mr-3" 
              data-id="<?php echo $fila['id_cuerpo'];?>"
              data-tel1="<?php echo $fila['tel_emer1'];?>"
              data-tel2="<?php echo $fila['tel_emer2'];?>"

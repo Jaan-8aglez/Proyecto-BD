@@ -12,16 +12,11 @@
   <!-- Theme style -->
   <link rel="stylesheet" href="assets/dist/css/adminlte.min.css">
 </head>
-<body class="hold-transition sidebar-mini login-page">
+<body class="hold-transition sidebar-mini">
 <!-- Site wrapper -->
-
+<div class="wrapper">
   <!-- NavBar -->
   <?php
-  if(isset($_SESSION['login']) &&$_SESSION['login'] == 'activa' ){
-
-  
-
-  echo '<div class="wrapper">';
 
   include "Vistas/estructura/header.php";
   
@@ -40,11 +35,6 @@
     }
   }
      include "Vistas/modulos/inicio.php";
-     echo '</div>';
-    } else {
-
-      include "Vistas/modulos/login.php";
-    }
   ?>
 
 
@@ -53,7 +43,8 @@
     <!-- Control sidebar content goes here -->
   </aside>
   <!-- /.control-sidebar -->
-
+</div>
+<!-- ./wrapper -->
 <?php
   include "Vistas/estructura/footer.php";
   

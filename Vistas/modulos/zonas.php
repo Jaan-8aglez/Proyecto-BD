@@ -82,7 +82,7 @@ $resultado = $conexion->query("SELECT * FROM zonas")or die ($conexion->error);
              <td><?php echo $fila['latitud'];?></td>
              <td><?php echo $fila['longitud'];?></td>
 
-             <td><button class="btn btn-success btnEditar" 
+             <td class="text-center"><button class="btn btn-success btnEditar mr-3" 
              data-id="<?php echo $fila['punto_geo'];?>"
              data-nombre="<?php echo $fila['nombre'];?>"
              data-frecuencia="<?php echo $fila['frecuencia'];?>"
