@@ -118,28 +118,6 @@ $resultado = $conexion->query("SELECT * FROM cuerpo_bomberos") or die($conexion-
 <div class="modal fade" id="ModalInsertar" tabindex="-1" aria-labelledby="ModalInsertarLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
-      <form action="././Modelos/insertarCuerpo.php" method="POST" enctype="multipart/form-data" > 
-      <div class="modal-header">
-        <h5 class="modal-title" id="ModalInsertarLabel">Agregar Cuerpo de Bombero</h5>
-        <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close">
-        <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-       <div class="row">
-        <div class="form-group col-6">
-          <label>Teléfono emergencia 1</label> 
-          <input type="texto" name="tel1" placeholder="Teléfono 1" id="tel1" class="form-control" required> 
-        </div>
-        <div class="form-group col-6">
-          <label>Teléfono emergencia 2</label> 
-          <input type="texto" name="tel2" placeholder="Teléfono 2" id="tel2" class="form-control" required> 
-        </div>
-        </div>
-        <div class="row">
-        <div class="form-group col-6">
-          <label>Número Hombres:</label> 
-          <input type="number" min="0" name="hombre" placeholder="Numero" id="hombre" class="form-control" required> 
       <form action="././Modelos/insertarCuerpo.php" method="POST" enctype="multipart/form-data">
         <div class="modal-header">
           <h5 class="modal-title" id="ModalInsertarLabel">Agregar Cuerpo de Bombero</h5>
@@ -151,11 +129,11 @@ $resultado = $conexion->query("SELECT * FROM cuerpo_bomberos") or die($conexion-
           <div class="row">
             <div class="form-group col-6">
               <label>Teléfono emergencia 1</label>
-              <input type="number" min="0" name="teluno" placeholder="Teléfono 1" id="teluno" class="form-control" required>
+              <input type="text" name="teluno" placeholder="Teléfono 1" id="teluno" class="form-control" required>
             </div>
             <div class="form-group col-6">
               <label>Teléfono emergencia 2</label>
-              <input type="number" min="0" name="teldos" placeholder="Teléfono 2" id="teldos" class="form-control" required>
+              <input type="text" name="teldos" placeholder="Teléfono 2" id="teldos" class="form-control" required>
             </div>
           </div>
           <div class="row">
@@ -224,57 +202,34 @@ $resultado = $conexion->query("SELECT * FROM cuerpo_bomberos") or die($conexion-
        <div class="row">
         <div class="form-group col-6">
           <label>Teléfono emergencia 1</label> 
-          <input type="text" name="tel1" placeholder="Teléfono 1" id="tel1Edit" class="form-control" required> 
+          <input type="text" name="teluno" placeholder="Teléfono 1" id="telunoEdit" class="form-control" required> 
         </div>
         <div class="form-group col-6">
           <label>Teléfono emergencia 2</label> 
-          <input type="text" name="tel2" placeholder="Teléfono 2" id="tel2Edit" class="form-control" required> 
+          <input type="text" name="teldos" placeholder="Teléfono 2" id="teldosEdit" class="form-control" required> 
         </div>
         </div>
         <div class="row">
-        <div class="form-group col-6">
-          <label>Número Hombres:</label> 
-          <input type="number" min="0" name="hombre" placeholder="Numero" id="hombreEdit" class="form-control" required> 
-      <form action="././Modelos/editarCuerpo.php" method="POST" enctype="multipart/form-data">
-        <div class="modal-header">
-          <h5 class="modal-title" id="modalEditarLabel">Editar Cuerpo Bomberos</h5>
-          <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          <input type="hidden" id="idEdit" name="id" class="form-control">
-          <div class="row">
-            <div class="form-group col-6">
-              <label>Teléfono emergencia 1</label>
-              <input type="number" min="0" name="teluno" placeholder="Teléfono 1" id="telunoEdit" class="form-control" required>
-            </div>
-            <div class="form-group col-6">
-              <label>Teléfono emergencia 2</label>
-              <input type="number" min="0" name="teldos" placeholder="Teléfono 2" id="teldosEdit" class="form-control" required>
-            </div>
+          <div class="form-group col-6">
+            <label>Número Hombres:</label>
+            <input type="number" min="0" name="hombre" placeholder="Numero" id="hombreEdit" class="form-control" required>
           </div>
-          <div class="row">
-            <div class="form-group col-6">
-              <label>Número Hombres:</label>
-              <input type="number" min="0" name="hombre" placeholder="Numero" id="hombreEdit" class="form-control" required>
-            </div>
-            <div class="form-group col-6">
-              <label>Número Camiones:</label>
-              <input type="number" min="0" name="camion" placeholder="Numero" id="camionEdit" class="form-control" required>
-            </div>
-          </div>
-          <div class="row">
-            <div class="form-group col-6">
-              <label>Número Cisternas:</label>
-              <input type="number" min="0" name="cisterna" placeholder="Numero" id="cisternaEdit" class="form-control" required>
-            </div>
-            <div class="form-group col-6">
-              <label>Número Helicoptero:</label>
-              <input type="number" min="0" name="helicoptero" placeholder="Numero" id="helicopteroEdit" class="form-control" required>
-            </div>
+          <div class="form-group col-6">
+            <label>Número Camiones:</label>
+            <input type="number" min="0" name="camion" placeholder="Numero" id="camionEdit" class="form-control" required>
           </div>
         </div>
+        <div class="row">
+          <div class="form-group col-6">
+            <label>Número Cisternas:</label>
+            <input type="number" min="0" name="cisterna" placeholder="Numero" id="cisternaEdit" class="form-control" required>
+          </div>
+          <div class="form-group col-6">
+            <label>Número Helicoptero:</label>
+            <input type="number" min="0" name="helicoptero" placeholder="Numero" id="helicopteroEdit" class="form-control" required>
+          </div>
+        </div>
+      </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
           <button type="submit" class="btn btn-primary editar">Actualizar</button>

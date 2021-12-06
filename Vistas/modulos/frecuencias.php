@@ -74,7 +74,7 @@ $resultado = $conexion->query("SELECT * FROM frecuencias") or die($conexion->err
               <tr>
 
                 <td><?php echo $fila['id_frecuencia']; ?></td>
-                <td><?php echo $fila['frecuencia_zona']; ?></td>
+                <td><?php echo $fila['frecuencia_zona']; ?>Mhz</td>
 
                 <td class="text-center align-middle">
                   <button class="btn btn-success btnEditar mx-1 my-1" data-id="<?php echo $fila['id_frecuencia']; ?>" data-frecuencia="<?php echo $fila['frecuencia_zona']; ?>" data-toggle="modal" data-target="#modalEditar">

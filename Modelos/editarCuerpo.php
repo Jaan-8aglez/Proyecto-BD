@@ -13,6 +13,7 @@ if(isset($_POST['teluno']) && isset($_POST['teldos']) && isset($_POST['hombre'])
     no_helicoptero='" . $_POST['helicoptero']."'
     
     where id_cuerpo=".$_POST['id']);
+    
     header("Refresh:0; url=" . $_SERVER['HTTP_REFERER'] . "?success");
 }              
 

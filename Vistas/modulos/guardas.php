@@ -11,7 +11,7 @@ $resultado = $conexion->query("SELECT * FROM guardas") or die($conexion->error);
     <div class="container-fluid">
       <div class="row mb-2">
         <div class="col-sm-6">
-          <h1>GUARDAS</h1>
+          <h1>GUARDA FORESTAL</h1>
         </div>
         <div class="col-sm-6">
           <ol class="breadcrumb float-sm-right">
@@ -127,38 +127,7 @@ $resultado = $conexion->query("SELECT * FROM guardas") or die($conexion->error);
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
-        <div class="form-group col-6">
-          <label>Teléfono</label> 
-          <input type="text" name="telefono" placeholder="Teléfono" id="telefono" class="form-control" required> 
-        </div>
-        </div>
-        <div class="form-group">
-          <label>Dirección</label> 
-          <input type="text" name="direccion" placeholder="Direccion" id="direccion" class="form-control" required> 
-        </div>
-        <div class="row">
-        <div class="form-group col-6">
-          <label>Antiguedad</label> 
-          <input type="number" min="0" name="antiguedad" placeholder="Años de antiguedad" id="antiguedad" class="form-control" required> 
-        </div>
-        <div class="form-group col-6">
-          <label>Rol</label> 
-          <input type="text" min="0" name="rol" placeholder="Rol guarda" id="rol" class="form-control" required> 
-        </div>
-        </div>
-        <div class="row">
-        <div class="form-group col-6">
-          <label>Contraseña</label> 
-          <input type="password" name="contraseña" placeholder="Contraseña" id="contraseña" class="form-control" required> 
-        </div>
-        <div class="form-group col-6">
-          <label>Punto geodésico</label> 
-          <input type="text" name="punto_geo" placeholder="Punto geodésico" id="punto_geo" class="form-control" required> 
         <div class="modal-body">
-          <div class="form-group">
-            <label>DNI Guarda</label>
-            <input type="text" name="dni" placeholder="DNI guarda" id="dni" class="form-control" required>
-          </div>
           <div class="row">
             <div class="form-group col-6">
               <label>Nombre</label>
@@ -272,52 +241,7 @@ $resultado = $conexion->query("SELECT * FROM guardas") or die($conexion->error);
         <div class="form-group col-6">
           <label>Punto geodésico</label> 
           <input type="text" name="punto_geo" placeholder="Punto geodésico" id="punto_geoEdit" class="form-control" required> 
-      <form action="././Modelos/editarGuarda.php" method="POST" enctype="multipart/form-data">
-        <div class="modal-header">
-          <h5 class="modal-title" id="modalEditarLabel">Editar Guarda</h5>
-          <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          <input type="hidden" id="idEdit" name="id" class="form-control">
-          <div class="form-group">
-            <label>DNI Guarda</label>
-            <input type="text" name="dni" placeholder="DNI guarda" id="dniEdit" class="form-control" required>
           </div>
-          <div class="row">
-            <div class="form-group col-6">
-              <label>Nombre</label>
-              <input type="text" min="0" name="nombre" placeholder="Nombre" id="nombreEdit" class="form-control" required>
-            </div>
-            <div class="form-group col-6">
-              <label>Teléfono</label>
-              <input type="number" min="0" name="telefono" placeholder="Teléfono" id="telefonoEdit" class="form-control" required>
-            </div>
-          </div>
-          <div class="form-group">
-            <label>Dirección</label>
-            <input type="text" name="direccion" placeholder="Direccion" id="direccionEdit" class="form-control" required>
-          </div>
-          <div class="row">
-            <div class="form-group col-6">
-              <label>Antiguedad</label>
-              <input type="number" min="0" name="antiguedad" placeholder="Años de antiguedad" id="antiguedadEdit" class="form-control" required>
-            </div>
-            <div class="form-group col-6">
-              <label>Rol</label>
-              <input type="text" min="0" name="rol" placeholder="Rol guarda" id="rolEdit" class="form-control" required>
-            </div>
-          </div>
-          <div class="row">
-            <div class="form-group col-6">
-              <label>Contraseña</label>
-              <input type="number" min="0" name="contraseña" placeholder="Contraseña" id="contraseñaEdit" class="form-control" required>
-            </div>
-            <div class="form-group col-6">
-              <label>Punto geodésico</label>
-              <input type="number" min="0" name="punto_geo" placeholder="Punto geodésico" id="punto_geoEdit" class="form-control" required>
-            </div>
           </div>
         </div>
         <div class="modal-footer">

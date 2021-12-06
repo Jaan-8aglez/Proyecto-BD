@@ -30,7 +30,7 @@
        $_GET["enlace"]=="guardas" ||
        $_GET["enlace"]=="bomberos" ||
        $_GET["enlace"]=="frecuencias" ||
-       $_GET["enlace"]=="pertenece"
+       $_GET["enlace"]=="protege"
     ){
       include "Vistas/modulos/".$_GET["enlace"].".php";
     }
