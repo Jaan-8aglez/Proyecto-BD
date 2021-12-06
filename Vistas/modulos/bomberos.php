@@ -137,11 +137,11 @@ $resultado = $conexion->query("SELECT * FROM cuerpo_bomberos")or die ($conexion-
        <div class="row">
         <div class="form-group col-6">
           <label>Teléfono emergencia 1</label> 
-          <input type="number" min="0" name="tel1" placeholder="Teléfono 1" id="tel1" class="form-control" required> 
+          <input type="texto" name="tel1" placeholder="Teléfono 1" id="tel1" class="form-control" required> 
         </div>
         <div class="form-group col-6">
           <label>Teléfono emergencia 2</label> 
-          <input type="number" min="0" name="tel2" placeholder="Teléfono 2" id="tel2" class="form-control" required> 
+          <input type="texto" name="tel2" placeholder="Teléfono 2" id="tel2" class="form-control" required> 
         </div>
         </div>
         <div class="row">
@@ -210,11 +210,11 @@ $resultado = $conexion->query("SELECT * FROM cuerpo_bomberos")or die ($conexion-
        <div class="row">
         <div class="form-group col-6">
           <label>Teléfono emergencia 1</label> 
-          <input type="number" min="0" name="tel1" placeholder="Teléfono 1" id="tel1Edit" class="form-control" required> 
+          <input type="text" name="tel1" placeholder="Teléfono 1" id="tel1Edit" class="form-control" required> 
         </div>
         <div class="form-group col-6">
           <label>Teléfono emergencia 2</label> 
-          <input type="number" min="0" name="tel2" placeholder="Teléfono 2" id="tel2Edit" class="form-control" required> 
+          <input type="text" name="tel2" placeholder="Teléfono 2" id="tel2Edit" class="form-control" required> 
         </div>
         </div>
         <div class="row">

@@ -148,7 +148,7 @@ $resultado = $conexion->query("SELECT * FROM guardas")or die ($conexion->error);
         </div>
         <div class="form-group col-6">
           <label>Teléfono</label> 
-          <input type="number" min="0" name="telefono" placeholder="Teléfono" id="telefono" class="form-control" required> 
+          <input type="text" name="telefono" placeholder="Teléfono" id="telefono" class="form-control" required> 
         </div>
         </div>
         <div class="form-group">
@@ -168,11 +168,11 @@ $resultado = $conexion->query("SELECT * FROM guardas")or die ($conexion->error);
         <div class="row">
         <div class="form-group col-6">
           <label>Contraseña</label> 
-          <input type="number" min="0" name="contraseña" placeholder="Contraseña" id="contraseña" class="form-control" required> 
+          <input type="password" name="contraseña" placeholder="Contraseña" id="contraseña" class="form-control" required> 
         </div>
         <div class="form-group col-6">
           <label>Punto geodésico</label> 
-          <input type="number" min="0" name="punto_geo" placeholder="Punto geodésico" id="punto_geo" class="form-control" required> 
+          <input type="text" name="punto_geo" placeholder="Punto geodésico" id="punto_geo" class="form-control" required> 
         </div>
         </div>
       </div>
@@ -229,7 +229,7 @@ $resultado = $conexion->query("SELECT * FROM guardas")or die ($conexion->error);
         </div>
         <div class="form-group col-6">
           <label>Teléfono</label> 
-          <input type="number" min="0" name="telefono" placeholder="Teléfono" id="telefonoEdit" class="form-control" required> 
+          <input type="text" name="telefono" placeholder="Teléfono" id="telefonoEdit" class="form-control" required> 
         </div>
         </div>
         <div class="form-group">
@@ -243,17 +243,17 @@ $resultado = $conexion->query("SELECT * FROM guardas")or die ($conexion->error);
         </div>
         <div class="form-group col-6">
           <label>Rol</label> 
-          <input type="text" min="0" name="rol" placeholder="Rol guarda" id="rolEdit" class="form-control" required> 
+          <input type="text" name="rol" placeholder="Rol guarda" id="rolEdit" class="form-control" required> 
         </div>
         </div>
         <div class="row">
         <div class="form-group col-6">
           <label>Contraseña</label> 
-          <input type="number" min="0" name="contraseña" placeholder="Contraseña" id="contraseñaEdit" class="form-control" required> 
+          <input type="password" name="contraseña" placeholder="Contraseña" id="contraseñaEdit" class="form-control" required> 
         </div>
         <div class="form-group col-6">
           <label>Punto geodésico</label> 
-          <input type="number" min="0" name="punto_geo" placeholder="Punto geodésico" id="punto_geoEdit" class="form-control" required> 
+          <input type="text" name="punto_geo" placeholder="Punto geodésico" id="punto_geoEdit" class="form-control" required> 
         </div>
         </div>
       </div>
