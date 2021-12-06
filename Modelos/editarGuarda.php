@@ -14,7 +14,7 @@ if (isset($_POST['dni']) && isset($_POST['nombre']) && isset($_POST['telefono'])
     contraseña='" . $_POST['contraseña'] . "',
     punto_geo='" . $_POST['punto_geo'] . "'
     
-    where id_guarda=" . $_POST['id']);
+    where dni_guarda=" . $_POST['id']);
 
     header("Refresh:0; url=" . $_SERVER['HTTP_REFERER'] . "?success");
 }

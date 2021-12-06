@@ -33,6 +33,7 @@
        $_GET["enlace"]=="protege"
     ){
       include "Vistas/modulos/".$_GET["enlace"].".php";
+    
     }
   }
   
