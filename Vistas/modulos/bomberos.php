@@ -118,7 +118,6 @@ $resultado = $conexion->query("SELECT * FROM cuerpo_bomberos") or die($conexion-
 <div class="modal fade" id="ModalInsertar" tabindex="-1" aria-labelledby="ModalInsertarLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
-<<<<<<< HEAD
       <form action="././Modelos/insertarCuerpo.php" method="POST" enctype="multipart/form-data" > 
       <div class="modal-header">
         <h5 class="modal-title" id="ModalInsertarLabel">Agregar Cuerpo de Bombero</h5>
@@ -141,14 +140,12 @@ $resultado = $conexion->query("SELECT * FROM cuerpo_bomberos") or die($conexion-
         <div class="form-group col-6">
           <label>Número Hombres:</label> 
           <input type="number" min="0" name="hombre" placeholder="Numero" id="hombre" class="form-control" required> 
-=======
       <form action="././Modelos/insertarCuerpo.php" method="POST" enctype="multipart/form-data">
         <div class="modal-header">
           <h5 class="modal-title" id="ModalInsertarLabel">Agregar Cuerpo de Bombero</h5>
           <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
->>>>>>> 8d76a9bac93113c6571f09ff5b8d21e9cb3ecb37
         </div>
         <div class="modal-body">
           <div class="row">
@@ -215,7 +212,6 @@ $resultado = $conexion->query("SELECT * FROM cuerpo_bomberos") or die($conexion-
 <div class="modal fade" id="modalEditar" tabindex="-1" aria-labelledby="modalEditarLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
-<<<<<<< HEAD
       <form action="././Modelos/editarCuerpo.php" method="POST" enctype="multipart/form-data" > 
       <div class="modal-header">
         <h5 class="modal-title" id="modalEditarLabel">Editar Cuerpo Bomberos</h5>
@@ -239,14 +235,12 @@ $resultado = $conexion->query("SELECT * FROM cuerpo_bomberos") or die($conexion-
         <div class="form-group col-6">
           <label>Número Hombres:</label> 
           <input type="number" min="0" name="hombre" placeholder="Numero" id="hombreEdit" class="form-control" required> 
-=======
       <form action="././Modelos/editarCuerpo.php" method="POST" enctype="multipart/form-data">
         <div class="modal-header">
           <h5 class="modal-title" id="modalEditarLabel">Editar Cuerpo Bomberos</h5>
           <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
->>>>>>> 8d76a9bac93113c6571f09ff5b8d21e9cb3ecb37
         </div>
         <div class="modal-body">
           <input type="hidden" id="idEdit" name="id" class="form-control">

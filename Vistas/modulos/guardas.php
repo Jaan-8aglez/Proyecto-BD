@@ -127,7 +127,6 @@ $resultado = $conexion->query("SELECT * FROM guardas") or die($conexion->error);
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
-<<<<<<< HEAD
         <div class="form-group col-6">
           <label>Teléfono</label> 
           <input type="text" name="telefono" placeholder="Teléfono" id="telefono" class="form-control" required> 
@@ -155,7 +154,6 @@ $resultado = $conexion->query("SELECT * FROM guardas") or die($conexion->error);
         <div class="form-group col-6">
           <label>Punto geodésico</label> 
           <input type="text" name="punto_geo" placeholder="Punto geodésico" id="punto_geo" class="form-control" required> 
-=======
         <div class="modal-body">
           <div class="form-group">
             <label>DNI Guarda</label>
@@ -195,7 +193,6 @@ $resultado = $conexion->query("SELECT * FROM guardas") or die($conexion->error);
               <input type="number" min="0" name="punto_geo" placeholder="Punto geodésico" id="punto_geo" class="form-control" required>
             </div>
           </div>
->>>>>>> 8d76a9bac93113c6571f09ff5b8d21e9cb3ecb37
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
@@ -230,7 +227,6 @@ $resultado = $conexion->query("SELECT * FROM guardas") or die($conexion->error);
 <div class="modal fade" id="modalEditar" tabindex="-1" aria-labelledby="modalEditarLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
-<<<<<<< HEAD
       <form action="././Modelos/editarGuarda.php" method="POST" enctype="multipart/form-data" > 
       <div class="modal-header">
         <h5 class="modal-title" id="modalEditarLabel">Editar Guarda</h5>
@@ -276,7 +272,6 @@ $resultado = $conexion->query("SELECT * FROM guardas") or die($conexion->error);
         <div class="form-group col-6">
           <label>Punto geodésico</label> 
           <input type="text" name="punto_geo" placeholder="Punto geodésico" id="punto_geoEdit" class="form-control" required> 
-=======
       <form action="././Modelos/editarGuarda.php" method="POST" enctype="multipart/form-data">
         <div class="modal-header">
           <h5 class="modal-title" id="modalEditarLabel">Editar Guarda</h5>
@@ -324,7 +319,6 @@ $resultado = $conexion->query("SELECT * FROM guardas") or die($conexion->error);
               <input type="number" min="0" name="punto_geo" placeholder="Punto geodésico" id="punto_geoEdit" class="form-control" required>
             </div>
           </div>
->>>>>>> 8d76a9bac93113c6571f09ff5b8d21e9cb3ecb37
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
