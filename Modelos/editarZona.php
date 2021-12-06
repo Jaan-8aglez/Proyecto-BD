@@ -5,7 +5,7 @@ if (isset($_POST['nombre']) && isset($_POST['frecuencia']) && isset($_POST['lati
 
     $conexion->query("UPDATE zonas SET
     nombre='" . $_POST['nombre'] . "',
-    frecuencia='" . $_POST['frecuencia'] . "',
+    frecuencia_zona='" . $_POST['frecuencia'] . "',
     latitud='" . $_POST['latitud'] . "',
     longitud='" . $_POST['longitud'] . "'
     

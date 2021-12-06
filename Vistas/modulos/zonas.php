@@ -84,14 +84,14 @@ if(isset($_POST['consulta'])){
 
              <td><?php echo $fila['punto_geo'];?></td>
              <td><?php echo $fila['nombre'];?></td>
-             <td><?php echo $fila['frecuencia'];?></td>
+             <td><?php echo $fila['frecuencia_zona'];?></td>
              <td><?php echo $fila['latitud'];?></td>
              <td><?php echo $fila['longitud'];?></td>
 
              <td class="text-center"><button class="btn btn-success btnEditar mr-3" 
              data-id="<?php echo $fila['punto_geo'];?>"
              data-nombre="<?php echo $fila['nombre'];?>"
-             data-frecuencia="<?php echo $fila['frecuencia'];?>"
+             data-frecuencia="<?php echo $fila['frecuencia_zona'];?>"
              data-latitud="<?php echo $fila['latitud'];?>"
              data-longitud="<?php echo $fila['longitud'];?>"
              data-toggle="modal" data-target="#modalEditar">
