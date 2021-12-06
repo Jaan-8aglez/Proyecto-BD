@@ -89,7 +89,6 @@ $resultado = $conexion->query("SELECT * FROM guardas")or die ($conexion->error);
              <td><?php echo $fila['punto_geo'];?></td>
 
              <td class="text-center"><button class="btn btn-success btnEditar mr-3" 
-             data-id="<?php echo $fila['id_guarda'];?>"
              data-dni="<?php echo $fila['dni_guarda'];?>"
              data-nombre="<?php echo $fila['nombre'];?>"
              data-telefono="<?php echo $fila['telefono'];?>"
@@ -102,7 +101,7 @@ $resultado = $conexion->query("SELECT * FROM guardas")or die ($conexion->error);
              <i class="fa fa-edit"></i></button>
 
              <button class="btn btn-danger btnEliminar" 
-             data-id="<?php echo $fila['id_guarda'];?>"
+             data-id="<?php echo $fila['dni_guarda'];?>"
              data-toggle="modal" data-target="#modalEliminar">
              <i class="fa fa-trash"></i></button></td>
 
