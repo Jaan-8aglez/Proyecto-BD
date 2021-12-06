@@ -5,7 +5,7 @@
       <div class="container-fluid">
         <div class="row mb-2 justify-content-end pr-2">
           <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="#">Inicio</a></li>
+            <li class="breadcrumb-item"><a href="inicio">Inicio</a></li>
             <li class="breadcrumb-item active">Panel Principal</li>
           </ol>
         </div>
@@ -55,6 +55,13 @@
                         Aunado a ello, se tiene dedicado el botón "+Añadir" para crear nuevos datos de forma organizada, y no obstante se puede editar
                         cualquier registro con los botones que tienen un ícono de un lapiz escribiendo, o incluso eliminar dichos registros haciendo click
                         en el botón con el ícono que asemeja a un bote de basura si así lo desean.
+                      </p>
+                      <p class="text-center">
+                        Hecho con <i class="fas fa-heart"></i> por:
+                        <br>Daniela Rocha Romero
+                        <br>Emmanuel Varela Calderón
+                        <br>Fernando Artemio Maldonado González
+                        <br>Janet Ochoa González
                       </p>
                     </div>
                     <div class="modal-footer">
