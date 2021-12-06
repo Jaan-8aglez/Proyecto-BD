@@ -88,10 +88,10 @@ if (isset($_POST['consulta'])) {
                 <td><?php echo $fila['longitud']; ?></td>
 
                 <td class="text-center align-middle">
-                  <button class="btn btn-success btnEditar mx-1 my" data-id="<?php echo $fila['punto_geo']; ?>" data-nombre="<?php echo $fila['nombre']; ?>" data-frecuencia="<?php echo $fila['frecuencia_zona']; ?>" data-latitud="<?php echo $fila['latitud']; ?>" data-longitud="<?php echo $fila['longitud']; ?>" data-toggle="modal" data-target="#modalEditar">
+                  <button class="btn btn-success btnEditar mx-1 my-1" data-id="<?php echo $fila['punto_geo']; ?>" data-nombre="<?php echo $fila['nombre']; ?>" data-frecuencia="<?php echo $fila['frecuencia_zona']; ?>" data-latitud="<?php echo $fila['latitud']; ?>" data-longitud="<?php echo $fila['longitud']; ?>" data-toggle="modal" data-target="#modalEditar">
                     <i class="fas fa-pen-square"></i></button>
 
-                  <button class="btn btn-danger btnEliminar mx-1 my" data-id="<?php echo $fila['punto_geo']; ?>" data-toggle="modal" data-target="#modalEliminar">
+                  <button class="btn btn-danger btnEliminar mx-1 my-1" data-id="<?php echo $fila['punto_geo']; ?>" data-toggle="modal" data-target="#modalEliminar">
                     <i class="fas fa-trash-alt"></i></button>
                 </td>
 
