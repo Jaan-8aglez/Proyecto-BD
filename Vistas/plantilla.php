@@ -35,7 +35,7 @@
       include "Vistas/modulos/".$_GET["enlace"].".php";
     }
   }
-      include "Vistas/modulos/inicio.php";
+  
   ?>
 
 
