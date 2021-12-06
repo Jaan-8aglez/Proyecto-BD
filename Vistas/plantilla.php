@@ -29,12 +29,13 @@
        $_GET["enlace"]=="puestoControl" ||
        $_GET["enlace"]=="guardas" ||
        $_GET["enlace"]=="bomberos" ||
-       $_GET["enlace"]=="frecuencias" 
+       $_GET["enlace"]=="frecuencias" ||
+       $_GET["enlace"]=="pertenece"
     ){
       include "Vistas/modulos/".$_GET["enlace"].".php";
     }
   }
-     include "Vistas/modulos/inicio.php";
+      include "Vistas/modulos/inicio.php";
   ?>
 
 

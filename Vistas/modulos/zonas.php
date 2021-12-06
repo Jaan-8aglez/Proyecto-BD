@@ -1,7 +1,6 @@
 <?php
 require '././Modelos/conexion.php';
 
-$salida ="";
 $resultado = $conexion->query("SELECT * FROM zonas ORDER BY punto_geo")or die ($conexion->error);
 
 if(isset($_POST['consulta'])){

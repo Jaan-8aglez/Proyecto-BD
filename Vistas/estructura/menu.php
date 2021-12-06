@@ -84,6 +84,14 @@
               </p>
             </a>
           </li>
+          <li class="nav-item">
+            <a href="guardas" class="nav-link">
+              <i class="nav-icon fas fa-fire-extinguisher"></i>
+              <p>
+                Pertenece
+              </p>
+            </a>
+          </li>
 
           <li class="nav-header">OPCIONES</li>
           <li class="nav-item">

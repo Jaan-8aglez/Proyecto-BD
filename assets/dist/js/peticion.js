@@ -4,8 +4,8 @@ $(buscar_datos());
 function buscar_datos(consulta)//el nombre de la variable que se manda
 {
 	$.ajax({
-		url : 'Vistas/modulos/zonas.php',
-		type : 'GET',
+		url : '../../Vistas/modulos/zonas.php',
+		type : 'POST',
 		dataType : 'html',
 		data : { consulta: consulta },//Tiene que ser el ultimo 
 		})
