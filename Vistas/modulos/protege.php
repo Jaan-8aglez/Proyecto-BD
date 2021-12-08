@@ -54,8 +54,7 @@ $resultado = $conexion->query("SELECT * FROM protege") or die($conexion->error);
           </span>
         </div>
 
-        <button type="button" class="btn btn-primary float-left" data-toggle="modal" data-target="#ModalInsertar">
-          <i class="fa fa-plus mr-2"></i>Agregar Datos</button>
+       
       </div>
       <div class="card-body overflow-auto" id="datos">
         <table id="example2" class="table table-bordered table-hover">
@@ -64,7 +63,7 @@ $resultado = $conexion->query("SELECT * FROM protege") or die($conexion->error);
               <th class="text-center">Punto geo</th>
               <th class="text-center">Id Cuerpo Bomberos</th>
               <th class="text-center">Prioridad</th>
-              <th class="text-center">Acciones</th>
+              
             </tr>
           </thead>
           <tbody>
@@ -78,14 +77,7 @@ $resultado = $conexion->query("SELECT * FROM protege") or die($conexion->error);
                 <td><?php echo $fila['id_cuerpo']; ?></td>
                 <td><?php echo $fila['prioridad']; ?></td>
 
-                <td class="text-center align-middle">
-                  <button class="btn btn-success btnEditar mx-1 my-1" data-id="<?php echo $fila['punto_geo']; ?>" data-nombre="<?php echo $fila['nombre']; ?>" data-frecuencia="<?php echo $fila['frecuencia_zona']; ?>" data-latitud="<?php echo $fila['latitud']; ?>" data-longitud="<?php echo $fila['longitud']; ?>" data-toggle="modal" data-target="#modalEditar">
-                    <i class="fas fa-pen-square"></i></button>
-
-                  <button class="btn btn-danger btnEliminar mx-1 my-1" data-id="<?php echo $fila['punto_geo']; ?>" data-toggle="modal" data-target="#modalEliminar">
-                    <i class="fas fa-trash-alt"></i></button>
-                </td>
-
+               
               </tr>
             <?php } ?>
           </tbody>

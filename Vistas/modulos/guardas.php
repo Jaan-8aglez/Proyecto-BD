@@ -128,14 +128,18 @@ $resultado = $conexion->query("SELECT * FROM guardas") or die($conexion->error);
           </button>
         </div>
         <div class="modal-body">
+        <div class="form-group">
+          <label>DNI Guarda</label> 
+          <input type="text" name="dni" placeholder="DNI guarda" id="dni" class="form-control" required> 
+        </div>
           <div class="row">
             <div class="form-group col-6">
               <label>Nombre</label>
-              <input type="text" min="0" name="nombre" placeholder="Nombre" id="nombre" class="form-control" required>
+              <input type="text" name="nombre" placeholder="Nombre" id="nombre" class="form-control" required>
             </div>
             <div class="form-group col-6">
               <label>Teléfono</label>
-              <input type="number" min="0" name="telefono" placeholder="Teléfono" id="telefono" class="form-control" required>
+              <input type="texto" name="telefono" placeholder="Teléfono" id="telefono" class="form-control" required>
             </div>
           </div>
           <div class="form-group">
@@ -149,13 +153,13 @@ $resultado = $conexion->query("SELECT * FROM guardas") or die($conexion->error);
             </div>
             <div class="form-group col-6">
               <label>Rol</label>
-              <input type="text" min="0" name="rol" placeholder="Rol guarda" id="rol" class="form-control" required>
+              <input type="text" name="rol" placeholder="Rol guarda" id="rol" class="form-control" required>
             </div>
           </div>
           <div class="row">
             <div class="form-group col-6">
               <label>Contraseña</label>
-              <input type="number" min="0" name="contraseña" placeholder="Contraseña" id="contraseña" class="form-control" required>
+              <input type="password" name="contraseña" placeholder="Contraseña" id="contraseña" class="form-control" required>
             </div>
             <div class="form-group col-6">
               <label>Punto geodésico</label>
