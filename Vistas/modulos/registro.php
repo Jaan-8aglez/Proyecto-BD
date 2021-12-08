@@ -1,6 +1,27 @@
+<?php
+require '././Modelos/conexion.php';
+error_reporting(0);
+session_start();
+
+if(isset($_SESSION["usuario"])){
+    header("location: inicio.php");
+}
+if(isset($_POST["submit"])){
+    $nombre=$_POST["nombre"];
+    $usuario=$_POST["usuario"];
+    $contraseña1=$_POST["contraseña"];
+    $contraseña2=$_POST["ccontraseña"];
+
+    if($contraseña1==$contraseña2){
+        $resultado = $conexion->query("SELECT * FROM guardas WHERE") or die($conexion->error);
+    }
+}
+
+?>
+
 <div class="login-box">
   <div class="login-logo">
-    <a href="assets/index2.html"><b>LOGIN</b>PANEL</a>
+    <a href="assets/index2.html"><b>REGISTRO</b>PANEL</a>
   </div>
   <!-- /.login-logo -->
   <div class="card">
@@ -8,6 +29,14 @@
       <p class="login-box-msg">Regístrese para iniciar su sesión</p>
 
       <form action="acceso.php" method="POST">
+      <div class="input-group mb-3">
+          <input type="text" name="nombre" class="form-control" placeholder="Nombre">
+          <div class="input-group-append">
+            <div class="input-group-text">
+              <span class="fas fa-user"></span>
+            </div>
+          </div>
+        </div>  
         <div class="input-group mb-3">
           <input type="text" name="usuario" class="form-control" placeholder="Usuario">
           <div class="input-group-append">
