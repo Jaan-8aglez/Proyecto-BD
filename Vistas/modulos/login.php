@@ -7,11 +7,7 @@
     <div class="card-body login-card-body">
       <p class="login-box-msg">Regístrese para iniciar su sesión</p>
 
-<<<<<<< HEAD
-      <form action="index.php" method="post">
-=======
       <form action="acceso.php" method="POST">
->>>>>>> 174e5ecd7ca1f6c755003baba333cf1737a9b433
         <div class="input-group mb-3">
           <input type="text" name="usuario" class="form-control" placeholder="Usuario">
           <div class="input-group-append">
