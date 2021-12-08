@@ -91,6 +91,7 @@ $resultado = $conexion->query("SELECT * FROM protege") or die($conexion->error);
           </tbody>
 
         </table>
+        <?php include '././Modelos/innerjoin.php' ?>
       </div>
       <!-- /.card-body -->
 
