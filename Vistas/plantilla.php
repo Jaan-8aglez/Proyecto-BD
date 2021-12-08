@@ -12,11 +12,14 @@
   <!-- Theme style -->
   <link rel="stylesheet" href="assets/dist/css/adminlte.min.css">
 </head>
-<body class="hold-transition sidebar-mini">
+<body class="hold-transition sidebar-mini login-page">
 <!-- Site wrapper -->
-<div class="wrapper">
+
   <!-- NavBar -->
   <?php
+  if(isset($_SESSION['login']) && $_SESSION['login'] == 'activa' ){
+
+  echo '<div class="wrapper">';
 
   include "Vistas/estructura/header.php";
   
@@ -30,13 +33,21 @@
        $_GET["enlace"]=="guardas" ||
        $_GET["enlace"]=="bomberos" ||
        $_GET["enlace"]=="frecuencias" ||
-       $_GET["enlace"]=="protege"
+       $_GET["enlace"]=="protege" 
+
     ){
       include "Vistas/modulos/".$_GET["enlace"].".php";
-    
     }
   }
-  
+     include "Vistas/modulos/inicio.php";
+     include "Vistas/estructura/footer.php";
+     
+     echo '</div>';
+    } else {
+
+      include "Vistas/modulos/login.php";
+      
+    }
   ?>
 
 
@@ -45,14 +56,7 @@
     <!-- Control sidebar content goes here -->
   </aside>
   <!-- /.control-sidebar -->
-</div>
-<!-- ./wrapper -->
-<?php
-  include "Vistas/estructura/footer.php";
-  
-  ?>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <!-- jQuery -->
 <script src="assets/plugins/jquery/jquery.min.js"></script>
 <!-- Bootstrap 4 -->
@@ -61,8 +65,5 @@
 <script src="assets/dist/js/adminlte.min.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="assets/dist/js/demo.js"></script>
-
-<script src="assets/js/peticion.js"></script>
-
 </body>
 </html>

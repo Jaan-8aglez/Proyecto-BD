@@ -7,17 +7,17 @@
     <div class="card-body login-card-body">
       <p class="login-box-msg">Regístrese para iniciar su sesión</p>
 
-      <form action="assets/index3.html" method="post">
+      <form action="acceso.php" method="POST">
         <div class="input-group mb-3">
-          <input type="email" class="form-control" placeholder="Email">
+          <input type="text" name="usuario" class="form-control" placeholder="Usuario">
           <div class="input-group-append">
             <div class="input-group-text">
-              <span class="fas fa-envelope"></span>
+              <span class="fas fa-user"></span>
             </div>
           </div>
         </div>
         <div class="input-group mb-3">
-          <input type="password" class="form-control" placeholder="Password">
+          <input type="password" name="contraseña" class="form-control" placeholder="Contraseña">
           <div class="input-group-append">
             <div class="input-group-text">
               <span class="fas fa-lock"></span>
@@ -33,22 +33,14 @@
               </label>
             </div>
           </div>
-          <!-- /.col -->
-          <div class="col-4">
-            <button type="submit" class="btn btn-primary btn-block">Iniciar sesión</button>
-          </div>
-          <!-- /.col -->
         </div>
       </form>
 
       <div class="social-auth-links text-center mb-3">
-        <p>- O -</p>
-        <a href="#" class="btn btn-block btn-primary">
-          <i class="fab fa-facebook mr-2"></i> Iniciar sesión con Facebook
-        </a>
-        <a href="#" class="btn btn-block btn-danger">
-          <i class="fab fa-google-plus mr-2"></i> Iniciar sesión con Google+
-        </a>
+        <p>- Verificacion de Credenciales -</p>
+        <button type="submit" class="btn btn-primary btn-block">
+        <i class="fas fa-sign-in-alt mr-2"></i>Iniciar Sesión
+        </button>
       </div>
       <!-- /.social-auth-links -->
 
