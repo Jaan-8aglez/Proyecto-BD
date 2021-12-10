@@ -15,6 +15,6 @@ if(isset($_POST['nombre']) && isset($_POST['punto_geo']) && isset($_POST['frecue
     header("Refresh:0; url=".$_SERVER['HTTP_REFERER']."?success");
 
 }else{
-    header("Location: ./Vistas/modulos/puestoControl?error=Favor de llenar todos los campos");
+    header("Location: ../Vistas/puestoControl.php?error=Favor de llenar todos los campos");
 }
 

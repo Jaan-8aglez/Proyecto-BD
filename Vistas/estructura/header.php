@@ -9,8 +9,11 @@
 
     <!-- Right navbar links -->
     <ul class="navbar-nav ml-auto">
-      <li class="nav-item d-none d-sm-inline-block">
-        <a href="assets/index.php" class="nav-link">Inicio</a>
+      <li class="nav-item d-none d-sm-inline-block white">
+            <a href="login.php" class="nav-link">
+              <i class="nav-icon fas fa-user"></i>
+                LOGIN
+            </a>
       </li>
       <!-- Navbar Search -->
       <li class="nav-item">
@@ -44,7 +47,7 @@
           <a href="#" class="dropdown-item">
             <!-- Message Start -->
             <div class="media">
-              <img src="assets/dist/img/mini-ema.jpg" alt="User Avatar" class="img-size-50 mr-3 img-circle">
+              <img src="../assets/dist/img/mini-ema.jpg" alt="User Avatar" class="img-size-50 mr-3 img-circle">
               <div class="media-body">
                 <h3 class="dropdown-item-title">
                   Emmanuel Varela
@@ -60,7 +63,7 @@
           <a href="#" class="dropdown-item">
             <!-- Message Start -->
             <div class="media">
-              <img src="assets/dist/img/mini-fer.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3">
+              <img src="../assets/dist/img/mini-fer.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3">
               <div class="media-body">
                 <h3 class="dropdown-item-title">
                   Fernando Maldonado
@@ -76,7 +79,7 @@
           <a href="#" class="dropdown-item">
             <!-- Message Start -->
             <div class="media">
-              <img src="assets/dist/img/mini-jan.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3">
+              <img src="../assets/dist/img/mini-jan.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3">
               <div class="media-body">
                 <h3 class="dropdown-item-title">
                 Janet Ochoa Gonzalez
@@ -132,3 +135,100 @@
     </ul>
   </nav>
   <!-- /.navbar -->
+   <!-- Main Sidebar Container -->
+   <aside class="main-sidebar sidebar-dark-primary elevation-4">
+    <!-- Brand Logo -->
+    <a href="index.php" class="brand-link">
+      <img src="../assets/dist/img/icono-fire.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3">
+      <span class="brand-text font-weight-light">Gestión de Incendios</span>
+    </a>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <!-- Sidebar user (optional) -->
+      <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+        <div class="image">
+          <img src="../assets/dist/img/bombero.png" class="img-circle elevation-2" alt="User Image">
+        </div>
+        <div class="info">
+          <a href="#" class="d-block">Bomberos</a>
+        </div>
+      </div>
+
+      <!-- Sidebar Menu -->
+      <nav class="mt-2">
+        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+          <!-- Add icons to the links using the .nav-icon class
+               with font-awesome or any other icon font library -->
+          <li class="nav-item">
+            <a href="inicio.php" class="nav-link">
+              <i class="nav-icon fas fa-home"></i>
+              <p>
+                Inicio
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="zonas.php" class="nav-link">
+              <i class="nav-icon fas fa-hotel"></i>
+              <p>
+                Zonas
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="bomberos.php" class="nav-link">
+              <i class="nav-icon fas fa-fire-extinguisher"></i>
+              <p>
+                Cuerpo de Bomberos
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="puestoControl.php" class="nav-link">
+              <i class="nav-icon fas fa-clipboard-check"></i>
+              <p>
+                Puestos de Control
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="frecuencias.php" class="nav-link">
+              <i class="nav-icon fas fa-wave-square"></i>
+              <p>
+                Frecuencias
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="guardas.php" class="nav-link">
+              <i class="nav-icon fas fa-users"></i>
+              <p>
+                Guardas
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="protege.php" class="nav-link">
+              <i class="nav-icon fas nav-icon fas fa-shield-alt"></i>
+              <p>
+                Protege
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="cerrarSesion.php" class="nav-link">
+              <i class="nav-icon fa fa-times"></i>
+              <p>
+                Cerrar Sesión
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <!-- /.sidebar-menu -->
+    </div>
+    <!-- /.sidebar -->
+  </aside>

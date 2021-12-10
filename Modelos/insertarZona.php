@@ -15,6 +15,6 @@ if(isset($_POST['nombre']) && isset($_POST['frecuencia']) && isset($_POST['latit
     header("Refresh:0; url=".$_SERVER['HTTP_REFERER']."?success");
 
 }else{
-    header("Location: ./Vistas/modulos/zonas?error=Favor de llenar todos los campos");
+    header("Location: ../Vistas/zonas.php?error=Favor de llenar todos los campos");
 }
 
